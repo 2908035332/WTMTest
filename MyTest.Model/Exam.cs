@@ -6,18 +6,31 @@ using WalkingTec.Mvvm.Core;
 
 namespace MyTest.Model
 {
+
+    
+    public enum TrueEnum
+    {
+        [Display(Name ="正确答案A")]
+        A,
+        [Display(Name = "正确答案B")]
+        B,
+        [Display(Name = "正确答案C")]
+        C,
+        [Display(Name = "正确答案D")]
+        D
+    }
     public class Exam : TopBasePoco
     {
         [Display(Name = "试题名编号")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public new  int ID { get; set; }
+        public new int ID { get; set; }
 
-        [Display(Name ="试题名")]
-        [Required(ErrorMessage ="必填项")]
+        [Display(Name = "试题名")]
+        [Required(ErrorMessage = "必填项")]
         public string Exam_Name { get; set; }
 
-        [Display(Name ="答案A")]
+        [Display(Name = "答案A")]
         [Required(ErrorMessage = "必填项")]
         public string Exam_A { get; set; }
 
@@ -41,6 +54,6 @@ namespace MyTest.Model
 
         [Display(Name = "正确答案")]
         [Required(ErrorMessage = "必填项")]
-        public string Exam_True { get; set; }
+        public TrueEnum TrueEnum { get; set; }
     }
 }
