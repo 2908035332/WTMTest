@@ -1,10 +1,11 @@
 ﻿using System;
+using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Core.Attributes;
 
 namespace MyTest.Model
 {
     [MiddleTable]
-    public class ExamExamType
+    public class ExamExamType: TopBasePoco
     {
         public Exam Exam { get; set; }
         public int ExamId { get; set; }
