@@ -2,13 +2,24 @@
 @inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
 
 <wt:form vm="@Model">
-<wt:row items-per-row="ItemsPerRowEnum.Two">
-<wt:textbox field="Entity.Name" />
-<wt:combobox field="Entity.Sex" />
-<wt:datetime field="Entity.Birthday" />
-</wt:row>
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:textbox field="Entity.Name" id="TestName" data-id="1111" />
+        <wt:combobox field="Entity.Sex" default-value="男" />
+        <wt:radio field="Entity.Sex" default-value="男"></wt:radio>
+        <wt:datetime field="Entity.Birthday" />
+        <wt:LinkButton url="" text="前往其它页面"></wt:LinkButton>
+        <wt:textbox id="Test" field="Entity.Name" default-value="空" />
+        <a href="https://www.baidu.com/">前往百度>>>></a>
+    </wt:row>
     <wt:row align="AlignEnum.Right">
         <wt:submitbutton />
         <wt:closebutton />
     </wt:row>
 </wt:form>
+<script type="text/javascript">
+
+    $("#Test").click(function () { alert($(document).data("id")); });
+
+    $("#TestName").click(function () { alert($(this).data("id")); });
+
+</script>

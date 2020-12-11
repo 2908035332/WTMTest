@@ -23,7 +23,7 @@
    <ProjectReference Include="..\MyTest.Model\MyTest.Model.csproj" />
     <ProjectReference Include="..\MyTest.DataAccess\MyTest.DataAccess.csproj" />
     <ProjectReference Include="..\MyTest.ViewModel\MyTest.ViewModel.csproj" />
- </ItemGroup >
+ </ItemGroup>
 </Project>
 
 
