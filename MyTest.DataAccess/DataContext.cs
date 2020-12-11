@@ -11,6 +11,10 @@ namespace MyTest.DataAccess
     public class DataContext : FrameworkContext
     {
         public DbSet<TableTest> TableTest { get; set; }
+
+        public DbSet<Exam> Exam { get; set; }
+
+        public DbSet<ExamType> ExamType { get; set; }
         public DataContext(CS cs)
              : base(cs)
         {

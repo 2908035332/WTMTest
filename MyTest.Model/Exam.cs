@@ -34,7 +34,10 @@ namespace MyTest.Model
         public string Exam_D { get; set; }
 
         [Display(Name = "试题类型")]
-        public ExamType Exam_TypeID { get; set; }
+        public ExamType Exam_Type { get; set; }
+
+        [Display(Name = "试题类型")]
+        public Guid Exam_TypeId { get; set; }
 
         [Display(Name = "正确答案")]
         [Required(ErrorMessage = "必填项")]
