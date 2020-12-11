@@ -1,0 +1,17 @@
+﻿@model MyTest.ViewModel.other.ExamVMs.ExamVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Exam_Name" />
+<wt:display field="Entity.Exam_A" />
+<wt:display field="Entity.Exam_B" />
+<wt:display field="Entity.Exam_C" />
+<wt:display field="Entity.Exam_D" />
+<wt:display field="Entity.Exam_Type.TypeName" />
+<wt:display field="Entity.TrueEnum" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

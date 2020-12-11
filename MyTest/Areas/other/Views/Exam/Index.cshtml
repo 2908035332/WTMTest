@@ -1,0 +1,10 @@
+﻿@model MyTest.ViewModel.other.ExamVMs.ExamListVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.Exam_Name" />
+<wt:combobox field="Searcher.Exam_TypeId" items="Searcher.AllExam_Types" empty-text="@Localizer["All"]" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/other/Exam/Search"/>
