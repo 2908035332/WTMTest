@@ -49,7 +49,7 @@ namespace MyTest.Model
         [Display(Name = "试题类型")]
         public ExamType Exam_Type { get; set; }
 
-        [Display(Name = "试题类型")]
+        [Display(Name = "试题类型编号")]
         public Guid Exam_TypeId { get; set; }
 
         [Display(Name = "正确答案")]
