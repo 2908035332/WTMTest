@@ -55,57 +55,43 @@
                             <li class="layui-col-xs3">
                                 <a href="javascript:;">
                                     <i class="layui-icon layui-icon-face-smile"></i>
-                                    <cite>文档</cite>
+                                    <cite></cite>
                                 </a>
                             </li>
                         </ul>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-    
-
-    
-
-    
-
     <div id="datetime"></div>
 </div>
 <script src="~/min/datetime.min.js"></script>
-<script>
-  $("#frontpage").parent().css("background-color", "#eee");
+<script type="text/javascript">
+    $("#frontpage").parent().css("background-color", "#eee");
+    //区块轮播切换
+    layui.use(['admin', 'carousel'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , carousel = layui.carousel
+            , element = layui.element
+            , device = layui.device();
 
+        //轮播切换
+        $('.layadmin-carousel').each(function () {
+            var othis = $(this);
+            carousel.render({
+                elem: this
+                , width: '100%'
+                , arrow: 'none'
+                , interval: othis.data('interval')
+                , autoplay: othis.data('autoplay') === true
+                , trigger: (device.ios || device.android) ? 'click' : 'hover'
+                , anim: othis.data('anim')
+            });
+        });
 
-  //区块轮播切换
-  layui.use(['admin', 'carousel'], function () {
-    var $ = layui.$
-      , admin = layui.admin
-      , carousel = layui.carousel
-      , element = layui.element
-      , device = layui.device();
+        element.render('progress');
 
-    //轮播切换
-    $('.layadmin-carousel').each(function () {
-      var othis = $(this);
-      carousel.render({
-        elem: this
-        , width: '100%'
-        , arrow: 'none'
-        , interval: othis.data('interval')
-        , autoplay: othis.data('autoplay') === true
-        , trigger: (device.ios || device.android) ? 'click' : 'hover'
-        , anim: othis.data('anim')
-      });
     });
-
-    element.render('progress');
-
-  });
-
- 
-
 </script>

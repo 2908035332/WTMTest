@@ -2,5 +2,96 @@
 @using Newtonsoft.Json;
 
 <link href="~/min/datetime.min.css" rel="stylesheet" />
-<div class="layui-row layui-col-space15" id="frontpage"></div>
+<div class="layui-row layui-col-space15" id="frontpage">
+    <div class="layui-col-md12">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-card-header">Shortcut</div>
+            <div class="layui-card-body">
+                <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                    <div carousel-item>
+                        <ul class="layui-row layui-col-space10">
+                            <li class="layui-col-xs3">
+                                <a lay-href="other/StuTable">
+                                    <i class="layui-icon layui-icon-username"></i>
+                                    <cite>Student information</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="other/Exam">
+                                    <i class="layui-icon layui-icon-tabs"></i>
+                                    <cite>Examination questions</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="other/TableTest">
+                                    <i class="layui-icon layui-icon-app"></i>
+                                    <cite>Other information</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="other/LinkManInfo">
+                                    <i class="layui-icon layui-icon-user"></i>
+                                    <cite>contact information</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="https://www.baidu.com/">
+                                    <i class="layui-icon layui-icon-website"></i>
+                                    <cite>Go to Baidu</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="https://www.layui.com/">
+                                    <i class="layui-icon layui-icon-website"></i>
+                                    <cite>Go to LayUi</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="">
+                                    <i class="layui-icon layui-icon-refresh"></i>
+                                    <cite>Refresh</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-face-smile"></i>
+                                    <cite></cite>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="datetime"></div>
+</div>
 <script src="~/min/datetime.min.js"></script>
+<script type="text/javascript">
+    $("#frontpage").parent().css("background-color", "#eee");
+    //区块轮播切换
+    layui.use(['admin', 'carousel'], function () {
+        var $ = layui.$
+            , admin = layui.admin
+            , carousel = layui.carousel
+            , element = layui.element
+            , device = layui.device();
+
+        //轮播切换
+        $('.layadmin-carousel').each(function () {
+            var othis = $(this);
+            carousel.render({
+                elem: this
+                , width: '100%'
+                , arrow: 'none'
+                , interval: othis.data('interval')
+                , autoplay: othis.data('autoplay') === true
+                , trigger: (device.ios || device.android) ? 'click' : 'hover'
+                , anim: othis.data('anim')
+            });
+        });
+
+        element.render('progress');
+
+    });
+</script>
