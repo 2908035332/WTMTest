@@ -1,0 +1,16 @@
+﻿@model MyTest.ViewModel.other.LinkManInfoVMs.LinkManInfoVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.Name" />
+<wt:textbox field="Entity.Address" />
+<wt:textbox field="Entity.Phone" />
+<wt:textbox field="Entity.Email" />
+<wt:combobox field="Entity.ManTypeID" items="AllManTypes"/>
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

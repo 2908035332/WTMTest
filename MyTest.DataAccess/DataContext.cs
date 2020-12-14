@@ -21,16 +21,7 @@ namespace MyTest.DataAccess
         public DbSet<LinkManType> LinkManType { get; set; }
 
 
-        #region MyRegion
-        //public DbSet<T1> T1 { get; set; }
-        //public DbSet<T2> T2 { get; set; }
-        //public DbSet<T3> T3 { get; set; }
-        //public DbSet<T4> T4 { get; set; }
-        //public DbSet<T5> T5 { get; set; }
-        //public DbSet<T6> T6 { get; set; }
-        //public DbSet<T7> T7 { get; set; }
-        //public DbSet<T8> T8 { get; set; }
-        #endregion
+        
         public DataContext(CS cs)
              : base(cs)
         {
