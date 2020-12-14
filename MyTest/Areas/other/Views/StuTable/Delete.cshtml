@@ -1,0 +1,17 @@
+﻿@model MyTest.ViewModel.other.StuTableVMs.StuTableVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:form vm="@Model">
+	<wt:quote>@Model.Localizer["DeleteConfirm"]</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.StuName" />
+<wt:display field="Entity.Sex" />
+<wt:display field="Entity.BirthDate" />
+<wt:display field="Entity.PhotoId" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

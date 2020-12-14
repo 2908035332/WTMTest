@@ -20,8 +20,8 @@ namespace MyTest.DataAccess
 
         public DbSet<LinkManType> LinkManType { get; set; }
 
+        public DbSet<StuTable> StuTable { get; set; }
 
-        
         public DataContext(CS cs)
              : base(cs)
         {
