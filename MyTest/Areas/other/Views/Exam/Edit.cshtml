@@ -2,15 +2,15 @@
 @inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
 
 <wt:form vm="@Model">
-<wt:row items-per-row="ItemsPerRowEnum.Two">
-<wt:textbox field="Entity.Exam_Name" />
-<wt:textbox field="Entity.Exam_A" />
-<wt:textbox field="Entity.Exam_B" />
-<wt:textbox field="Entity.Exam_C" />
-<wt:textbox field="Entity.Exam_D" />
-<wt:combobox field="Entity.Exam_TypeId" items="AllExam_Types"/>
-<wt:combobox field="Entity.TrueEnum" />
-</wt:row>
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:textarea field="Entity.Exam_Name" colspan="2" placeholder="试题题目" />
+        <wt:textbox field="Entity.Exam_A" placeholder="试题答案A" />
+        <wt:textbox field="Entity.Exam_B" placeholder="试题答案B" />
+        <wt:textbox field="Entity.Exam_C" placeholder="试题答案C" />
+        <wt:textbox field="Entity.Exam_D" placeholder="试题答案D" />
+        <wt:combobox field="Entity.Exam_TypeId" items="AllExam_Types" />
+        <wt:combobox field="Entity.TrueEnum" />
+    </wt:row>
     <wt:hidden field="Entity.ID" />
     <wt:row align="AlignEnum.Right">
         <wt:submitbutton />

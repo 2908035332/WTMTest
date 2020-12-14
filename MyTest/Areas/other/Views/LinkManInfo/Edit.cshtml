@@ -3,10 +3,10 @@
 
 <wt:form vm="@Model">
 <wt:row items-per-row="ItemsPerRowEnum.Two">
-<wt:textbox field="Entity.Name" />
-<wt:textbox field="Entity.Address" />
-<wt:textbox field="Entity.Phone" />
-<wt:textbox field="Entity.Email" />
+<wt:textbox field="Entity.Name" placeholder="姓名"/>
+<wt:textbox field="Entity.Address" placeholder="联系地址"/>
+<wt:textbox field="Entity.Phone" placeholder="联系号码"/>
+<wt:textbox field="Entity.Email" placeholder="电子邮件"/>
 <wt:combobox field="Entity.ManTypeID" items="AllManTypes"/>
 </wt:row>
     <wt:hidden field="Entity.ID" />
