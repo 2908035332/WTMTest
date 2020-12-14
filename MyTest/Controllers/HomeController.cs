@@ -20,7 +20,7 @@ namespace MyTest.Controllers
         [AllRights]
         public IActionResult Index()
         {
-            ViewData["title"] = "WTM";
+            ViewData["title"] = "OTHER";
             return View();
         }
 

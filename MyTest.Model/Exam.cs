@@ -26,7 +26,7 @@ namespace MyTest.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public new int ID { get; set; }
 
-        [Display(Name = "试题名")]
+        [Display(Name = "试题")]
         [Required(ErrorMessage = "必填项")]
         public string Exam_Name { get; set; }
 
@@ -49,7 +49,7 @@ namespace MyTest.Model
         [Display(Name = "试题类型")]
         public ExamType Exam_Type { get; set; }
 
-        [Display(Name = "试题类型编号")]
+        [Display(Name = "试题类型")]
         public Guid Exam_TypeId { get; set; }
 
         [Display(Name = "正确答案")]
