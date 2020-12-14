@@ -2,13 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using WalkingTec.Mvvm.Core;
+using static MyTest.Model.EnumClass;
 
 namespace MyTest.Model
 {
-    public enum TableTestSexEnum
-    {
-        女 = 0, 男 = 1
-    }
     public class TableTest : TopBasePoco
     {
         [Key]
@@ -21,7 +18,7 @@ namespace MyTest.Model
         public string Name { get; set; }
 
         [Display(Name = "性别")]
-        public TableTestSexEnum Sex { get; set; }
+        public TableSexEnum Sex { get; set; }
 
         [Display(Name = "生日")]
         public DateTime Birthday { get; set; }
