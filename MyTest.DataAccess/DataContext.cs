@@ -15,6 +15,12 @@ namespace MyTest.DataAccess
         public DbSet<Exam> Exam { get; set; }
 
         public DbSet<ExamType> ExamType { get; set; }
+
+        public DbSet<LinkManInfo> LinkManInfo { get; set; }
+
+        public DbSet<LinkManType> LinkManType { get; set; }
+
+
         #region MyRegion
         //public DbSet<T1> T1 { get; set; }
         //public DbSet<T2> T2 { get; set; }
@@ -30,11 +36,15 @@ namespace MyTest.DataAccess
         {
         }
 
-        public DataContext(string cs, DBTypeEnum dbtype, string version=null)
+        public DataContext(string cs, DBTypeEnum dbtype, string version = null)
              : base(cs, dbtype, version)
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+        }
     }
 
     /// <summary>

@@ -9,14 +9,18 @@ namespace MyTest.Model
 {
     public class LinkManType : TopBasePoco
     {
+        public LinkManType() {
+            LinkManInfos = new List<LinkManInfo>();
+        }
         [Display(Name = "联系人类型编号")]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TypeId { get; set; }
+        public new int ID { get; set; }
 
         [Display(Name = "联系人类型名称")]
         [Required(ErrorMessage ="必填项")]
         [StringLength(20,ErrorMessage ="最多20个字符")]
         public string TypeName { get; set; }
+
+        [Display(Name ="联系")]
+        public List<LinkManInfo> LinkManInfos { get; set; }
     }
 }

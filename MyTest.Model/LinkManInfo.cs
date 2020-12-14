@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using WalkingTec.Mvvm.Core;
 
 namespace MyTest.Model
 {
-    public class LinkManInfo : LinkManType
+    public class LinkManInfo : TopBasePoco
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -31,8 +32,10 @@ namespace MyTest.Model
         public string Email { get; set; }
 
 
-        public LinkManType LinkManType { get; set; }
-        [Display(Name ="类型编号")]
-        public Guid LinkManTypeID { get; set; }
+        [Display(Name = "联系人类型")]
+        public LinkManType ManType { get; set; }
+
+        [Display(Name = "联系人类型")]
+        public int ManTypeID { get; set; }
     }
 }
