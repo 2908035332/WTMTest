@@ -20,7 +20,7 @@ namespace MyTest.Model
 
         [Display(Name = "学生性别")]
         [Required(ErrorMessage = "性别必填项")]
-        public TableSexEnum Sex { get; set; }
+        public TableSexEnum? Sex { get; set; }
 
         [Display(Name ="出生日期")]
         [Required(ErrorMessage = "出生日期必填项")]
