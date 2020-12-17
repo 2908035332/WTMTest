@@ -22,6 +22,8 @@ namespace MyTest.DataAccess
 
         public DbSet<StuTable> StuTable { get; set; }
 
+        public DbSet<MyUser> MyUser { get; set; }
+
         public DataContext(CS cs)
              : base(cs)
         {
