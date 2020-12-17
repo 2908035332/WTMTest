@@ -13,6 +13,9 @@ namespace MyTest.ViewModel.MyUserVMs
 {
     public partial class MyUserListVM : BasePagedListVM<MyUser_View, MyUserSearcher>
     {
+        public class a {
+            public int MyProperty { get; set; }
+        }
         protected override List<GridAction> InitGridAction()
         {
             return new List<GridAction>
