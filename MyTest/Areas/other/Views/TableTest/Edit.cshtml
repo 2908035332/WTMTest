@@ -2,11 +2,11 @@
 @inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
 
 <wt:form vm="@Model">
-    <wt:row items-per-row="ItemsPerRowEnum.Two">
-        <wt:textbox field="Entity.Name" placeholder="请填写姓名"/>
-        <wt:radio field="Entity.Sex" padding-text="请选择性别"/>
-        <wt:datetime field="Entity.Birthday" placeholder="请填写生日"/>
-    </wt:row>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.Name" />
+<wt:combobox field="Entity.Sex" />
+<wt:datetime field="Entity.Birthday" />
+</wt:row>
     <wt:hidden field="Entity.ID" />
     <wt:row align="AlignEnum.Right">
         <wt:submitbutton />

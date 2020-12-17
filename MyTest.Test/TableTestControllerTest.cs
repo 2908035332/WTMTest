@@ -42,8 +42,8 @@ namespace MyTest.Test
             TableTestVM vm = rv.Model as TableTestVM;
             TableTest v = new TableTest();
 			
-            v.ID = 59;
-            v.Name = "56RkNvY93";
+            v.ID = 90;
+            v.Name = "nJPcRH";
             vm.Entity = v;
             _controller.Create(vm);
 
@@ -51,8 +51,8 @@ namespace MyTest.Test
             {
                 var data = context.Set<TableTest>().FirstOrDefault();
 				
-                Assert.AreEqual(data.ID, 59);
-                Assert.AreEqual(data.Name, "56RkNvY93");
+                Assert.AreEqual(data.ID, 90);
+                Assert.AreEqual(data.Name, "nJPcRH");
             }
 
         }
@@ -64,8 +64,8 @@ namespace MyTest.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
        			
-                v.ID = 59;
-                v.Name = "56RkNvY93";
+                v.ID = 90;
+                v.Name = "nJPcRH";
                 context.Set<TableTest>().Add(v);
                 context.SaveChanges();
             }
@@ -77,7 +77,7 @@ namespace MyTest.Test
             v = new TableTest();
             v.ID = vm.Entity.ID;
        		
-            v.Name = "1dI";
+            v.Name = "KSPlgOpg";
             vm.Entity = v;
             vm.FC = new Dictionary<string, object>();
 			
@@ -89,7 +89,7 @@ namespace MyTest.Test
             {
                 var data = context.Set<TableTest>().FirstOrDefault();
  				
-                Assert.AreEqual(data.Name, "1dI");
+                Assert.AreEqual(data.Name, "KSPlgOpg");
             }
 
         }
@@ -102,8 +102,8 @@ namespace MyTest.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
         		
-                v.ID = 59;
-                v.Name = "56RkNvY93";
+                v.ID = 90;
+                v.Name = "nJPcRH";
                 context.Set<TableTest>().Add(v);
                 context.SaveChanges();
             }
@@ -132,8 +132,8 @@ namespace MyTest.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v.ID = 59;
-                v.Name = "56RkNvY93";
+                v.ID = 90;
+                v.Name = "nJPcRH";
                 context.Set<TableTest>().Add(v);
                 context.SaveChanges();
             }
@@ -150,9 +150,9 @@ namespace MyTest.Test
             using (var context = new DataContext(_seed, DBTypeEnum.Memory))
             {
 				
-                v1.ID = 59;
-                v1.Name = "56RkNvY93";
-                v2.Name = "1dI";
+                v1.ID = 90;
+                v1.Name = "nJPcRH";
+                v2.Name = "KSPlgOpg";
                 context.Set<TableTest>().Add(v1);
                 context.Set<TableTest>().Add(v2);
                 context.SaveChanges();

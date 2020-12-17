@@ -5,9 +5,13 @@
     <PreserveCompilationReferences>true</PreserveCompilationReferences>
  </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Search.Data" Version="10.1.0" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <ProjectReference Include="..\MyTest.Model\MyTest.Model.csproj" />
-  </ItemGroup >
+  </ItemGroup>
 </Project>
 

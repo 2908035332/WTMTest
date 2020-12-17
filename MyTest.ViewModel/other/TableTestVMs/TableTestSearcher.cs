@@ -16,8 +16,6 @@ namespace MyTest.ViewModel.other.TableTestVMs
         public String Name { get; set; }
         [Display(Name = "性别")]
         public TableSexEnum? Sex { get; set; }
-        [Display(Name = "生日")]
-        public DateRange Birthday { get; set; }
 
         protected override void InitVM()
         {

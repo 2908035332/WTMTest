@@ -7,7 +7,7 @@ using WalkingTec.Mvvm.Core.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using MyTest.Model;
-
+using Microsoft.Azure.Search.Models;
 
 namespace MyTest.ViewModel.other.TableTestVMs
 {
@@ -44,7 +44,6 @@ namespace MyTest.ViewModel.other.TableTestVMs
             var query = DC.Set<TableTest>()
                 .CheckContain(Searcher.Name, x=>x.Name)
                 .CheckEqual(Searcher.Sex, x=>x.Sex)
-                .CheckBetween(Searcher.Birthday?.GetStartTime(), Searcher.Birthday?.GetEndTime(), x => x.Birthday, includeMax: false)
                 .Select(x => new TableTest_View
                 {
 				    ID = x.ID,

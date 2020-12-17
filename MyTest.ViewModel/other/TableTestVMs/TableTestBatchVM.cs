@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Core.Extensions;
 using MyTest.Model;
-
+using static MyTest.Model.EnumClass;
 
 namespace MyTest.ViewModel.other.TableTestVMs
 {
@@ -25,6 +25,10 @@ namespace MyTest.ViewModel.other.TableTestVMs
     /// </summary>
     public class TableTest_BatchEdit : BaseVM
     {
+        [Display(Name = "姓名")]
+        public String Name { get; set; }
+        [Display(Name = "性别")]
+        public TableSexEnum? Sex { get; set; }
 
         protected override void InitVM()
         {
