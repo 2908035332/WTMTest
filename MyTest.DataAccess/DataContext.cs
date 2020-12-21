@@ -24,6 +24,11 @@ namespace MyTest.DataAccess
 
         public DbSet<MyUser> MyUser { get; set; }
 
+        #region CRM
+        public DbSet<Activitys> Activitys { get; set; }
+
+        public DbSet<Customers> Customers { get; set; }
+        #endregion
         public DataContext(CS cs)
              : base(cs)
         {
@@ -36,7 +41,7 @@ namespace MyTest.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
         }
     }
 

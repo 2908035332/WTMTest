@@ -59,6 +59,7 @@ namespace MyTest.ViewModel.MyUserVMs
 
         public override void DoEdit(bool updateAllFields = false)
         {
+            Entity.Password = Utils.GetMD5String(Entity.Password);
             Entity.UserRoles = new List<FrameworkUserRole>();
             if(SelectedUserRolesIDs != null )
             {

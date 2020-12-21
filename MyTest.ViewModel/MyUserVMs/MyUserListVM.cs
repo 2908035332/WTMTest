@@ -13,9 +13,6 @@ namespace MyTest.ViewModel.MyUserVMs
 {
     public partial class MyUserListVM : BasePagedListVM<MyUser_View, MyUserSearcher>
     {
-        public class a {
-            public int MyProperty { get; set; }
-        }
         protected override List<GridAction> InitGridAction()
         {
             return new List<GridAction>
@@ -30,7 +27,6 @@ namespace MyTest.ViewModel.MyUserVMs
                 this.MakeStandardAction("MyUser", GridActionStandardTypesEnum.ExportExcel, Localizer["Export"], ""),
             };
         }
-
 
         protected override IEnumerable<IGridColumn<MyUser_View>> InitGridHeader()
         {
