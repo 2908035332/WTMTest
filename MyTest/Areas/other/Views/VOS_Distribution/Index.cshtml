@@ -1,9 +1,0 @@
-﻿@model MyTest.ViewModel.other.VOS_DistributionVMs.VOS_DistributionListVM
-@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
-
-<wt:searchpanel vm="@Model" reset-btn="true">
-<wt:row items-per-row="ItemsPerRowEnum.Three">
-<wt:textbox field="Searcher.DName" />
-</wt:row>
-</wt:searchpanel>
-<wt:grid vm="@Model" url="/other/VOS_Distribution/Search"/>

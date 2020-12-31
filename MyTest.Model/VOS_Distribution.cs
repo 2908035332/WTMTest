@@ -11,6 +11,12 @@ namespace MyTest.Model
         [Display(Name = "分销分部")]
         [Required(ErrorMessage = "不可为空")]
         [StringLength(50, ErrorMessage = "字符在50以内")]
-        public string DName { get; set; }
+        public string DistributionName { get; set; }
+
+        public List<VOS_Distribution> Children { get; set; }
+        [Display(Name = "父级")]
+        public VOS_Distribution Parent { get; set; }
+        [Display(Name = "父级")]
+        public Guid? ParentID { get; set; }
     }
 }

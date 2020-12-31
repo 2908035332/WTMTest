@@ -9,7 +9,7 @@ namespace MyTest.Model
     public class MyUser: FrameworkUserBase
     {
         [Display(Name = "分销分部")]
-        public Guid DistrID { get; set; }
+        public Guid DistributionID { get; set; }
 
         [Display(Name = "分销分部")]
         public VOS_Distribution Distribution { get; set; }

@@ -1,0 +1,12 @@
+﻿@model MyTest.ViewModel.MyUserVMs.MyUserListVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:combobox field="Searcher.DistributionID" items="Searcher.AllDistributions" empty-text="@Localizer["All"]" />
+<wt:textbox field="Searcher.ITCode" />
+<wt:textbox field="Searcher.Name" />
+<wt:combobox field="Searcher.IsValid" empty-text="@Localizer["All"]" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/MyUser/Search"/>

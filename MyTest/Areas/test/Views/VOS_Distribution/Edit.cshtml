@@ -1,9 +1,10 @@
-﻿@model MyTest.ViewModel.other.VOS_DistributionVMs.VOS_DistributionVM
+﻿@model MyTest.ViewModel.test.VOS_DistributionVMs.VOS_DistributionVM
 @inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
 
 <wt:form vm="@Model">
 <wt:row items-per-row="ItemsPerRowEnum.Two">
-<wt:textbox field="Entity.DName" />
+<wt:textbox field="Entity.DistributionName" />
+<wt:combobox field="Entity.ParentID" items="AllParents"/>
 </wt:row>
     <wt:hidden field="Entity.ID" />
     <wt:row align="AlignEnum.Right">

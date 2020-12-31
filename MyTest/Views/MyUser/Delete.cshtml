@@ -1,0 +1,26 @@
+﻿@model MyTest.ViewModel.MyUserVMs.MyUserVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:form vm="@Model">
+	<wt:quote>@Model.Localizer["DeleteConfirm"]</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Distribution.DistributionName" />
+<wt:display field="Entity.ITCode" />
+<wt:display field="Entity.Password" />
+<wt:display field="Entity.Email" />
+<wt:display field="Entity.Name" />
+<wt:display field="Entity.Sex" />
+<wt:display field="Entity.CellPhone" />
+<wt:display field="Entity.HomePhone" />
+<wt:display field="Entity.Address" />
+<wt:display field="Entity.PhotoId" />
+<wt:display field="Entity.IsValid" />
+
+
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

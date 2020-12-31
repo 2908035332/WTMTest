@@ -1,14 +1,12 @@
-﻿@model MyTest.ViewModel.other.VOS_DistributionVMs.VOS_DistributionBatchVM
+﻿@model MyTest.ViewModel.MyUserVMs.MyUserBatchVM
 @inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
 
 <wt:form vm="@Model">
-    <div style="margin-bottom:10px">@Model.Localizer["BatchEditConfirm"] </div>
-<wt:row items-per-row="ItemsPerRowEnum.Two">
-</wt:row>
+	<wt:quote>@Model.Localizer["BatchDeleteConfirm"]</wt:quote>
     <wt:hidden field="Ids" />
     <wt:grid vm="ListVM" use-local-data="true" height="300"  hidden-checkbox="true" hidden-panel="true"/>
     <wt:row align="AlignEnum.Right">
-        <wt:submitbutton />
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="@Model.Localizer["Delete"]"/>
         <wt:closebutton />
     </wt:row>
 </wt:form>

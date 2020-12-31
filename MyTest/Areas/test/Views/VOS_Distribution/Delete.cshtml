@@ -1,10 +1,11 @@
-﻿@model MyTest.ViewModel.other.VOS_DistributionVMs.VOS_DistributionVM
+﻿@model MyTest.ViewModel.test.VOS_DistributionVMs.VOS_DistributionVM
 @inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
 
 <wt:form vm="@Model">
 	<wt:quote>@Model.Localizer["DeleteConfirm"]</wt:quote>
 <wt:row items-per-row="ItemsPerRowEnum.Two">
-<wt:display field="Entity.DName" />
+<wt:display field="Entity.DistributionName" />
+<wt:display field="Entity.Parent.DistributionName" />
 </wt:row>
     <wt:hidden field="Entity.ID" />
     <wt:row align="AlignEnum.Right">

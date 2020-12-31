@@ -1,0 +1,24 @@
+﻿@model MyTest.ViewModel.MyUserVMs.MyUserVM
+@inject IStringLocalizer<WalkingTec.Mvvm.Core.Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.DistributionID" items="AllDistributions"/>
+<wt:textbox field="Entity.ITCode" />
+<wt:textbox field="Entity.Password" />
+<wt:textbox field="Entity.Email" />
+<wt:textbox field="Entity.Name" />
+<wt:combobox field="Entity.Sex" />
+<wt:textbox field="Entity.CellPhone" />
+<wt:textbox field="Entity.HomePhone" />
+<wt:textbox field="Entity.Address" />
+<wt:upload field="Entity.PhotoId" />
+<wt:switch field="Entity.IsValid" />
+<wt:checkbox field="SelectedUserRolesIDs" items="AllUserRoless"/>
+<wt:checkbox field="SelectedUserGroupsIDs" items="AllUserGroupss"/>
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

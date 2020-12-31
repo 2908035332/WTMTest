@@ -4,12 +4,12 @@ using System;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Mvc;
 using WalkingTec.Mvvm.Core.Extensions;
-using MyTest.ViewModel.other.VOS_DistributionVMs;
+using MyTest.ViewModel.test.VOS_DistributionVMs;
 
 namespace MyTest.Controllers
 {
-    [Area("other")]
-    [ActionDescription("分销分部")]
+    [Area("test")]
+    [ActionDescription("部门管理")]
     public partial class VOS_DistributionController : BaseController
     {
         #region Search
