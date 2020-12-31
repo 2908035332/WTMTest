@@ -4,25 +4,25 @@ using System;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Mvc;
 using WalkingTec.Mvvm.Core.Extensions;
-using MyTest.ViewModel.MyUserVMs;
+using MyTest.ViewModel.other.VOS_DistributionVMs;
 
 namespace MyTest.Controllers
 {
-    
-    [ActionDescription("新用户管理")]
-    public partial class MyUserController : BaseController
+    [Area("other")]
+    [ActionDescription("分销分部")]
+    public partial class VOS_DistributionController : BaseController
     {
         #region Search
         [ActionDescription("Search")]
         public ActionResult Index()
         {
-            var vm = CreateVM<MyUserListVM>();
+            var vm = CreateVM<VOS_DistributionListVM>();
             return PartialView(vm);
         }
 
         [ActionDescription("Search")]
         [HttpPost]
-        public string Search(MyUserListVM vm)
+        public string Search(VOS_DistributionListVM vm)
         {
             if (ModelState.IsValid)
             {
@@ -40,13 +40,13 @@ namespace MyTest.Controllers
         [ActionDescription("Create")]
         public ActionResult Create()
         {
-            var vm = CreateVM<MyUserVM>();
+            var vm = CreateVM<VOS_DistributionVM>();
             return PartialView(vm);
         }
 
         [HttpPost]
         [ActionDescription("Create")]
-        public ActionResult Create(MyUserVM vm)
+        public ActionResult Create(VOS_DistributionVM vm)
         {
             if (!ModelState.IsValid)
             {
@@ -72,14 +72,14 @@ namespace MyTest.Controllers
         [ActionDescription("Edit")]
         public ActionResult Edit(string id)
         {
-            var vm = CreateVM<MyUserVM>(id);
+            var vm = CreateVM<VOS_DistributionVM>(id);
             return PartialView(vm);
         }
 
         [ActionDescription("Edit")]
         [HttpPost]
         [ValidateFormItemOnly]
-        public ActionResult Edit(MyUserVM vm)
+        public ActionResult Edit(VOS_DistributionVM vm)
         {
             if (!ModelState.IsValid)
             {
@@ -105,7 +105,7 @@ namespace MyTest.Controllers
         [ActionDescription("Delete")]
         public ActionResult Delete(string id)
         {
-            var vm = CreateVM<MyUserVM>(id);
+            var vm = CreateVM<VOS_DistributionVM>(id);
             return PartialView(vm);
         }
 
@@ -113,7 +113,7 @@ namespace MyTest.Controllers
         [HttpPost]
         public ActionResult Delete(string id, IFormCollection nouse)
         {
-            var vm = CreateVM<MyUserVM>(id);
+            var vm = CreateVM<VOS_DistributionVM>(id);
             vm.DoDelete();
             if (!ModelState.IsValid)
             {
@@ -130,7 +130,7 @@ namespace MyTest.Controllers
         [ActionDescription("Details")]
         public ActionResult Details(string id)
         {
-            var vm = CreateVM<MyUserVM>(id);
+            var vm = CreateVM<VOS_DistributionVM>(id);
             return PartialView(vm);
         }
         #endregion
@@ -140,13 +140,13 @@ namespace MyTest.Controllers
         [ActionDescription("BatchEdit")]
         public ActionResult BatchEdit(string[] IDs)
         {
-            var vm = CreateVM<MyUserBatchVM>(Ids: IDs);
+            var vm = CreateVM<VOS_DistributionBatchVM>(Ids: IDs);
             return PartialView(vm);
         }
 
         [HttpPost]
         [ActionDescription("BatchEdit")]
-        public ActionResult DoBatchEdit(MyUserBatchVM vm, IFormCollection nouse)
+        public ActionResult DoBatchEdit(VOS_DistributionBatchVM vm, IFormCollection nouse)
         {
             if (!ModelState.IsValid || !vm.DoBatchEdit())
             {
@@ -164,13 +164,13 @@ namespace MyTest.Controllers
         [ActionDescription("BatchDelete")]
         public ActionResult BatchDelete(string[] IDs)
         {
-            var vm = CreateVM<MyUserBatchVM>(Ids: IDs);
+            var vm = CreateVM<VOS_DistributionBatchVM>(Ids: IDs);
             return PartialView(vm);
         }
 
         [HttpPost]
         [ActionDescription("BatchDelete")]
-        public ActionResult DoBatchDelete(MyUserBatchVM vm, IFormCollection nouse)
+        public ActionResult DoBatchDelete(VOS_DistributionBatchVM vm, IFormCollection nouse)
         {
             if (!ModelState.IsValid || !vm.DoBatchDelete())
             {
@@ -187,13 +187,13 @@ namespace MyTest.Controllers
 		[ActionDescription("Import")]
         public ActionResult Import()
         {
-            var vm = CreateVM<MyUserImportVM>();
+            var vm = CreateVM<VOS_DistributionImportVM>();
             return PartialView(vm);
         }
 
         [HttpPost]
         [ActionDescription("Import")]
-        public ActionResult Import(MyUserImportVM vm, IFormCollection nouse)
+        public ActionResult Import(VOS_DistributionImportVM vm, IFormCollection nouse)
         {
             if (vm.ErrorListVM.EntityList.Count > 0 || !vm.BatchSaveData())
             {
@@ -208,7 +208,7 @@ namespace MyTest.Controllers
 
         [ActionDescription("Export")]
         [HttpPost]
-        public IActionResult ExportExcel(MyUserListVM vm)
+        public IActionResult ExportExcel(VOS_DistributionListVM vm)
         {
             return vm.GetExportData();
         }

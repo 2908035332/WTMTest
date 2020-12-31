@@ -8,14 +8,14 @@ using WalkingTec.Mvvm.Core.Extensions;
 using MyTest.Model;
 
 
-namespace MyTest.ViewModel.MyUserVMs
+namespace MyTest.ViewModel.other.VOS_DistributionVMs
 {
-    public partial class MyUserBatchVM : BaseBatchVM<MyUser, MyUser_BatchEdit>
+    public partial class VOS_DistributionBatchVM : BaseBatchVM<VOS_Distribution, VOS_Distribution_BatchEdit>
     {
-        public MyUserBatchVM()
+        public VOS_DistributionBatchVM()
         {
-            ListVM = new MyUserListVM();
-            LinkedVM = new MyUser_BatchEdit();
+            ListVM = new VOS_DistributionListVM();
+            LinkedVM = new VOS_Distribution_BatchEdit();
         }
 
     }
@@ -23,7 +23,7 @@ namespace MyTest.ViewModel.MyUserVMs
 	/// <summary>
     /// Class to define batch edit fields
     /// </summary>
-    public class MyUser_BatchEdit : BaseVM
+    public class VOS_Distribution_BatchEdit : BaseVM
     {
 
         protected override void InitVM()

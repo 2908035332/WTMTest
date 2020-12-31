@@ -24,6 +24,9 @@ namespace MyTest.DataAccess
 
         public DbSet<MyUser> MyUser { get; set; }
 
+
+        public DbSet<VOS_Distribution> VOS_Distribution { get; set; }
+
         #region CRM
         public DbSet<Activitys> Activitys { get; set; }
 
